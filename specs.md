@@ -12,3 +12,6 @@ Main Gun: 40mm Bofors
     Ready Rack Replenishment Rate: 10s
     Stablized: Yes
 Turret Rotation: 35°/s
+Armor Specs:
+    Frontal: 20mm RHA
+    Sides:  
