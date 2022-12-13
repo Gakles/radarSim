@@ -10,7 +10,7 @@ public class Main {
     private static void opener(){
       screenCoords screen = new screenCoords();
       sJFrame(screen.getScreenWidth(), screen.getScreenHeight());
-      
+      PCV player = new PCV(0);
 
       System.out.println("Load Complete");
     }
