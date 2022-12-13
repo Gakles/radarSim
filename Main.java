@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import java.awt.*;
 
 public class Main {
@@ -10,8 +11,7 @@ public class Main {
     private static void opener(){
       screenCoords screen = new screenCoords();
       sJFrame(screen.getScreenWidth(), screen.getScreenHeight());
-      PCV player = new PCV(0);
-
+      //PCV player = new PCV(0);
       System.out.println("Load Complete");
     }
     private static void sJFrame(int width, int height){
