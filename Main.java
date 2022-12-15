@@ -9,19 +9,27 @@ public class Main {
     }
     private static void opener(){
       screenCoords screen = new screenCoords();
-      sJFrame(screen.getScreenWidth(), screen.getScreenHeight());
+      MyJFrame f = new MyJFrame();
+      int sWidth = screen.getScreenWidth();
+      int sHeight = screen.getScreenHeight();
+      f.setTitle("Drawing Graphics in Frames");
+      f.setBounds(0,0,sWidth,sHeight);
+      f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      f.setVisible(true);
+      
+      
+      //PCV player = new PCV(0);
       System.out.println("Load Complete");
     }
-    private static void sJFrame(int width, int height){
-      JFrame frame = new JFrame("FrameDemo");
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      //frame.getContentPane().add("nah", BorderLayout.CENTER);
-      frame.pack();
-      frame.setSize(width,height);
-      frame.setVisible(true);
-      JFrame.setDefaultLookAndFeelDecorated(true);
-    }
+    static class MyJFrame extends JFrame {
+      public void paint(Graphics g) {
+        g.setColor(Color.red);
+         g.drawRect(20,10,100,60);
+      }
+   }
+
     static class screenCoords{
+      //makes object containing screenwidth and screeneheight
       public screenCoords() {
       }
       Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
