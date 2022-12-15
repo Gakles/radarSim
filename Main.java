@@ -16,15 +16,16 @@ public class Main {
       f.setBounds(0,0,sWidth,sHeight);
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       f.setVisible(true);
+      f.setBackground(Color.BLACK);
       
       
       //PCV player = new PCV(0);
       System.out.println("Load Complete");
     }
     static class MyJFrame extends JFrame {
-      public void paint(Graphics g) {
+      public void paint(Graphics g, int sWidth, int sHeight) {
         g.setColor(Color.red);
-         g.drawRect(20,10,100,60);
+        g.drawRect(20,10,100,60);
       }
    }
 
